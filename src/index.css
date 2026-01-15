@@ -6,3 +6,8 @@
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background: linear-gradient(120deg, #E0F4F2 0%, #FFFFFF 100%);
+  color: #1E1E1E;
+  font-family: 'Arial', sans-serif;
+}

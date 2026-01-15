@@ -25,3 +25,4 @@ const Tariffs: React.FC = () => {
 };
 
 export default Tariffs;
+
