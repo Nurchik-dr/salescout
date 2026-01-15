@@ -1,33 +1,23 @@
 import React from "react";
-import "./App.css";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Steps from "./components/Steps/Steps";
-import Advantages from "./components/Advantages/Analitics";
-import Tariffs from "./components/Tariffs/Tariffs";
-import Reviews from "./components/Reviews/Reviews";
-import CTA from "./components/CTA/CTA";
+import How from "./components/How/How";
+import Results from "./components/Results/Results";
+import Plans from "./components/Plans/Plans";
+import TrySection from "./components/TrySection";
 import Footer from "./components/Footer/Footer";
 
 const App: React.FC = () => {
   return (
-    <>
+    <div>
       <Header />
-      <hr />
       <Hero />
-      <hr />
-      <Steps />
-      <hr />
-      <Advantages />
-      <hr />
-      <Tariffs />
-      <hr />
-      <Reviews />
-      <hr />
-      <CTA />
-      <hr />
+      <How />
+      <Results />
+      <Plans />
+      <TrySection />
       <Footer />
-    </>
+    </div>
   );
 };
 

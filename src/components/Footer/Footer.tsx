@@ -2,8 +2,10 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <p>© SaleScout 2026 | Пользовательское соглашение</p>
+    <footer style={{ background: "#E7F4F2", padding: "60px 80px", textAlign: "center" }}>
+      <p style={{ fontSize: "16px", color: "#555" }}>
+        © 2026 SaleScout.me — будь первым и продавай больше. Бот работает 24/7, чтобы твои продажи росли каждый день.
+      </p>
     </footer>
   );
 };
