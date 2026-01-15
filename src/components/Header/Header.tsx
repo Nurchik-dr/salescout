@@ -3,7 +3,7 @@ import React from "react";
 const Header: React.FC = () => {
   return (
     <header>
-      <div className="logo">SaleScout</div>
+      <div className="logo">ScoutNur</div>
       <nav>
         <a href="#how">Как это работает</a>
         <a href="#tariffs">Тарифы</a>
