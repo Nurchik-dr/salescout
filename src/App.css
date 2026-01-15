@@ -48,7 +48,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #ff6f3c;
+    color: #7b7979;
 }
 
 /* === Кнопки === */
@@ -59,7 +59,7 @@ header nav a:hover {
     border-radius: 8px;
     font-weight: bold;
     font-size: 16px;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     background: linear-gradient(90deg, #1e6dff, #4bb1ff);
     color: #fff;
@@ -69,6 +69,9 @@ header nav a:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     background: linear-gradient(90deg, #1550c2, #3399ff);
+}
+.btn:hover {
+    color: #fff;
 }
 
 /* === Секции === */
