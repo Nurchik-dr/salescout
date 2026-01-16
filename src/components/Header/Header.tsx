@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Header: React.FC = () => {
-  const [active, setActive] = useState<string>("");
+  const [active, setActive] = useState("");
 
   const menu = [
     { id: "how", label: "Как работает" },

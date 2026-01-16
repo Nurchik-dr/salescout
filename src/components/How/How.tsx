@@ -4,59 +4,44 @@ import { Search, ArrowDown, Trophy, ShoppingCart } from "lucide-react";
 const How: React.FC = () => {
   const steps = [
     {
-      icon: <Search size={22} />,
+      icon: <Search size={20} />,
       title: "Смотрим цены",
-      text: "TopPrice проверяет цены у продавцов в карточке товара.",
+      text: "TopPrice проверяет цены продавцов в карточке товара.",
     },
     {
-      icon: <ArrowDown size={22} />,
+      icon: <ArrowDown size={20} />,
       title: "Снижаем аккуратно",
-      text: "Если ты не первый — снижаем цену чуть ниже конкурента.",
+      text: "Если ты не первый — снижаем на 1₸ ниже конкурента.",
     },
     {
-      icon: <Trophy size={22} />,
+      icon: <Trophy size={20} />,
       title: "Ты снова первый",
-      text: "Твой магазин поднимается в самый верх списка продавцов.",
+      text: "Твой товар поднимается в самый верх списка.",
     },
     {
-      icon: <ShoppingCart size={22} />,
-      title: "Забираешь заказы",
-      text: "Покупатели чаще выбирают первого — заказы идут к тебе.",
+      icon: <ShoppingCart size={20} />,
+      title: "Ты забираешь заказы",
+      text: "Первый продавец получает большую часть покупок.",
     },
   ];
 
   return (
     <section id="how">
       <div className="container">
-        <div className="section-header">
-          <h2>Как работает TopPrice</h2>
-          <p>
-            Никакой магии. Просто вместо живого менеджера следим за карточкой
-            товара и ценой — только быстрее и без выходных.
-          </p>
-        </div>
+        <h2>Как работает TopPrice</h2>
+        <p className="section-sub">
+          Без магии и лишних слов. Мы делаем то, что обычно делает менеджер —
+          только быстрее и точнее.
+        </p>
 
         <div className="grid grid-3">
-          {steps.map((step, idx) => (
+          {steps.map((s, idx) => (
             <div key={idx} className="card">
               <div className="card-header">
-                <div
-                  style={{
-                    width: 32,
-                    height: 32,
-                    borderRadius: 999,
-                    background: "rgba(15,23,42,0.9)",
-                    border: "1px solid rgba(148,163,184,0.4)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {step.icon}
-                </div>
-                <h3>{step.title}</h3>
+                <div className="icon-wrapper">{s.icon}</div>
+                <h3>{s.title}</h3>
               </div>
-              <p>{step.text}</p>
+              <p>{s.text}</p>
             </div>
           ))}
         </div>
