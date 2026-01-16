@@ -251,7 +251,13 @@ header {
   text-transform: uppercase;
   color: var(--text-main);
 }
-
+.logo {
+  transition: opacity 0.15s ease;
+}
+.logo:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
 .logo-dot {
   width: 8px;
   height: 8px;
