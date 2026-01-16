@@ -34,7 +34,7 @@ const How: React.FC = () => {
           только быстрее и точнее.
         </p>
 
-        <div className="grid grid-3">
+        <div className="grid grid-2">
           {steps.map((s, idx) => (
             <div key={idx} className="card">
               <div className="card-header">

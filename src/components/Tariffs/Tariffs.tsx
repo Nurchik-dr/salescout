@@ -16,20 +16,20 @@ const Tariffs: React.FC = () => {
           Платишь за количество товаров. Без странных доплат и мелкого шрифта.
         </p>
 
-        <div className="grid grid-3">
+        <div className="grid-tariffs">
           {plans.map((p) => (
-            <div key={p.title} className="card">
+            <div key={p.title} className="card tariff-card">
               <div className="card-header">
                 <div className="icon-wrapper">
                   <Package size={18} />
                 </div>
                 <h3>{p.title}</h3>
               </div>
+
               <p>{p.items}</p>
               <p className="card-price">{p.price}</p>
-              <button className="btn" style={{ marginTop: 14 }}>
-                Выбрать
-              </button>
+
+              <button className="btn tariff-btn">Выбрать</button>
             </div>
           ))}
         </div>

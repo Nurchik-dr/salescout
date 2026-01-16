@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         <div className="logo">
           TopPrice<span className="logo-dot" />
         </div>
-        <nav>
+        <nav className="header-nav">
           {menu.map((item) => (
             <a
               key={item.id}

@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
                   <div className="hero-city">Kaspi · Алматы</div>
                 </div>
               </div>
-              <span className="hero-badge">Автоценник включён</span>
+              <span className="hero-badge">Бот включён</span>
             </div>
 
             <div className="hero-row-stats">
