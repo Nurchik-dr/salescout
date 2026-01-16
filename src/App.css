@@ -1,251 +1,105 @@
-/* === Базовые стили === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-    background: #fefefe;
-    color: #333;
-    line-height: 1.6;
+  background: #F7F7F7;
+  color: #111;
+  line-height: 1.5;
 }
 
-/* === Ссылки === */
-a {
-    text-decoration: none;
-    color: inherit;
+/* LAYOUT */
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* === Header === */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border-bottom: 1px solid #eee;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-header .logo {
-    font-weight: bold;
-    font-size: 26px;
-    color: #1e6dff;
-}
-
-header nav a {
-    margin-left: 25px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.2s;
-}
-
-header nav a:hover {
-    color: #7b7979;
-}
-
-/* === Кнопки === */
-.btn {
-    display: inline-block;
-    cursor: pointer;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    background: linear-gradient(90deg, #1e6dff, #4bb1ff);
-    color: #fff;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    background: linear-gradient(90deg, #1550c2, #3399ff);
-}
-.btn:hover {
-    color: #fff;
-}
-
-/* === Секции === */
 section {
-    padding: 120px 20px 80px 20px;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
+  padding: 80px 0;
 }
 
-/* Заголовки */
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
 h1 {
-    font-size: 48px;
-    margin-bottom: 25px;
-    font-weight: 700;
-    color: #1e6dff;
+  font-size: 42px;
+  margin-bottom: 24px;
 }
 
 h2 {
-    font-size: 34px;
-    margin-bottom: 30px;
-    font-weight: 600;
-    color: #242d2f;
+  font-size: 32px;
+  margin-bottom: 24px;
 }
 
-h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    color: #333;
+p {
+  color: #555;
+  margin-bottom: 16px;
 }
 
-/* === Карточки (Steps, Advantages, Tariffs, Reviews) === */
-.steps .step,
-.advantages .adv,
-.tariffs .tariff,
-.reviews .review {
-    margin: 25px 0;
-    padding: 25px;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+/* GRID + CARDS */
+.grid {
+  display: grid;
+  gap: 24px;
 }
 
-.steps .step:hover,
-.advantages .adv:hover,
-.tariffs .tariff:hover,
-.reviews .review:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+.card {
+  background: #FFF;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
-/* === Tariffs === */
-/* === Tariffs === */
-.tariffs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    gap: 25px;
-}
-.ttt {
-    display: flex;
-}
-
-.tariffs .tariff {
-    flex: 1 1 220px;
-    background: linear-gradient(145deg, #ffffff, #f0f8ff); /* легкий градиент */
-    border-radius: 15px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
-    cursor: pointer;
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #10B981;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 8px;
 }
 
-.tariffs .tariff:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    background: linear-gradient(145deg, #f0f8ff, #e6f0ff);
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.8);
+  border-bottom: 1px solid #eee;
+  z-index: 100;
 }
 
-/* Название тарифа */
-.tariffs .tariff h3 {
-    font-size: 24px;
-    color: #263550;
-    margin-bottom: 15px;
-    font-weight: 700;
+header .logo {
+  font-weight: 700;
+  font-size: 20px;
 }
 
-/* Цена */
-.tariffs .tariff p:first-of-type {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2d2b2b;
+header nav a {
+  margin-left: 24px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* Описание тарифа */
-.tariffs .tariff p:last-of-type {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
+header nav a.active {
+  color: #10B981;
 }
 
-/* Кнопка внутри тарифа */
-.tariffs .tariff .btn {
-    padding: 10px 20px;
-    font-size: 15px;
-}
-
-
-.tariffs .tariff {
-    flex: 1 1 220px;
-}
-
-/* === HR === */
-hr {
-    border: none;
-    height: 2px;
-    background: #eee;
-    margin: 50px 0;
-}
-
-/* === Footer === */
+/* FOOTER */
 footer {
-    padding: 50px 20px;
-    border-top: 1px solid #eee;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
-}
-
-footer a {
-    color: #1e6dff;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* === Hero секция с мягким фоном === */
-.hero {
-    background: linear-gradient(180deg, #e6f0ff 0%, #ffffff 100%);
-    border-radius: 12px;
-    padding: 80px 20px 80px 20px;
-    margin-bottom: 50px;
-}
-
-/* Подзаголовок hero */
-.hero p {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* === Адаптивность === */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
-    }
-    header nav {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    header nav a {
-        margin: 10px 0 0 0;
-    }
-    .tariffs {
-        flex-direction: column;
-    }
+  text-align: center;
+  padding: 32px 0;
+  font-size: 14px;
+  color: #666;
 }

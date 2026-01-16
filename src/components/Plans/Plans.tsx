@@ -8,19 +8,19 @@ const Plans: React.FC = () => {
   ];
 
   return (
-    <section id="plans" style={{ padding: "100px 80px" }}>
-      <h2 style={{ fontSize: "42px", textAlign: "center", marginBottom: "60px" }}>Тарифы и планы</h2>
-      <div style={{ display: "flex", justifyContent: "center", gap: "40px" }}>
+    <section id="plans">
+      <h2>Тарифы и планы</h2>
+      <div className="grid">
         {plans.map((plan) => (
-          <div key={plan.title} style={{ background: "#FFFFFF", border: "2px solid #E7F4F2", borderRadius: "20px", padding: "40px", width: "300px", textAlign: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-            <h3 style={{ marginBottom: "10px", color: "#00BFA6" }}>{plan.title}</h3>
+          <div key={plan.title} className="card">
+            <h3>{plan.title}</h3>
             <p>{plan.items}</p>
-            <h2>{plan.price}</h2>
+            <h3>{plan.price}</h3>
             <p>{plan.desc}</p>
           </div>
         ))}
       </div>
-      <p style={{ textAlign: "center", marginTop: "40px", color:"#555" }}>3 дня бесплатно — попробуй без рисков и без карт.</p>
+      <p>3 дня бесплатно — попробуй без рисков и без карт.</p>
     </section>
   );
 };

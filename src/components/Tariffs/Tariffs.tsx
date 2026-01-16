@@ -1,28 +1,34 @@
 import React from "react";
 
-const tariffs = [
-  { name: "Мини", price: "35 000 ₸/мес", desc: "До 50 товаров" },
-  { name: "Стандарт", price: "50 000 ₸/мес", desc: "До 500 товаров" },
-  { name: "Бизнес", price: "80 000 ₸/мес", desc: "До 800 товаров" },
-  { name: "PRO", price: "100 000 ₸/мес", desc: "До 1300 товаров" },
-];
-
 const Tariffs: React.FC = () => {
+  const plans = [
+    { title: "Старт", items: "до 50 товаров", price: "35 000 ₸/мес" },
+    { title: "Рост", items: "до 500 товаров", price: "50 000 ₸/мес" },
+    { title: "Бизнес", items: "до 1300 товаров", price: "80 000 ₸/мес" },
+  ];
+
   return (
-    <section id="tariffs" className="tariffs">
-      <h2>Тарифы</h2>
-      <div className="ttt">
-        {tariffs.map((t, idx) => (
-        <div key={idx} className="tariff">
-          <h3>{t.name}</h3>
-          <p>{t.price}</p>
-          <p>{t.desc}</p>
-          <a href="#" className="btn">Попробовать</a>
+    <section id="tariffs">
+      <div className="container">
+        <h2>Тарифы</h2>
+
+        <div className="grid" style={{gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))"}}>
+          {plans.map((p) => (
+            <div key={p.title} className="card">
+              <h3>{p.title}</h3>
+              <p>{p.items}</p>
+              <h3>{p.price}</h3>
+              <a className="btn" style={{marginTop: 12}}>Выбрать</a>
+            </div>
+          ))}
         </div>
-      ))}</div>
+
+        <p style={{marginTop: 16, fontSize: 14, color: "#777"}}>
+          3 дня бесплатно — без карт и без обязательств.
+        </p>
+      </div>
     </section>
   );
 };
 
 export default Tariffs;
-

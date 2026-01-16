@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aetherfield Style — Example</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", Arial, sans-serif;
+    }
+
+    body {
+        background: #ffffff;
+        color: #111;
+        line-height: 1.6;
+    }
+
+    /* HEADER */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 20px;
+        color: #000;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .menu-item {
+        text-decoration: none;
+        color: #111;
+        font-weight: 500;
+        font-size: 15px;
+        transition: color 0.2s ease;
+    }
+
+    .menu-item:hover {
+        color: #00bfa6;
+    }
+
+    .menu-item.cta {
+        background: #111;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 6px;
+        transition: all 0.3s;
+    }
+
+    .menu-item.cta:hover {
+        background: #00bfa6;
+    }
+
+    /* MAIN */
+    .main {
+        padding: 160px 80px 100px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .hero h2 {
+        font-size: 56px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        color: #000;
+    }
+
+    /* JOB CARDS */
+    .jobs {
+        display: grid;
+        gap: 40px;
+    }
+
+    .job-card {
+        border-top: 1px solid #ddd;
+        padding-top: 30px;
+    }
+
+    .job-card h3 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .job-info {
+        font-size: 15px;
+        color: #666;
+        margin-bottom: 14px;
+    }
+
+    .job-desc {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #00bfa6;
+    }
+
+    /* FOOTER */
+    .footer {
+        border-top: 1px solid #eee;
+        padding: 60px 80px;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: #111;
+        font-weight: 500;
+    }
+
+    .footer-links a.cta {
+        background: #111;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+    }
+
+    .footer-links a.cta:hover {
+        background: #00bfa6;
+    }
+
+    .copyright {
+        color: #666;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="logo">Aetherfield</div>
+        <nav class="menu">
+            <a href="#" class="menu-item">Product</a>
+            <a href="#" class="menu-item">Journal</a>
+            <a href="#" class="menu-item">About</a>
+            <a href="#" class="menu-item">Careers</a>
+            <a href="#" class="menu-item cta">Get started</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1>Careers at</h1>
+            <h2>Aetherfield</h2>
+        </section>
+
+        <section class="jobs">
+            <div class="job-card">
+                <h3>UX Designer</h3>
+                <p class="job-info">Contract · San Francisco, CA</p>
+                <p class="job-desc">
+                    Shape the tools that drive climate intelligence. You’ll lead cross-functional teams to build
+                    thoughtful, scalable solutions for sustainability-forward organizations.
+                </p>
+                <a href="#" class="btn">View role</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Data Scientist</h3>
+                <p class="job-info">Full-time · Denver, CO</p>
+                <p class="job-desc">
+                    Help build the intelligence layer for climate action. You’ll turn complex sustainability data into
+                    clear, actionable insights for enterprise teams.
+                </p>
+                <a href="#" class="btn">View role</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Product Manager</h3>
+                <p class="job-info">Part-time · Seattle, WA</p>
+                <p class="job-desc">
+                    Shape the tools that drive climate intelligence. You’ll lead cross-functional teams to build
+                    thoughtful, scalable solutions for sustainability-forward organizations.
+                </p>
+                <a href="#" class="btn">View role</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Product</a>
+            <a href="#">Journal</a>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#" class="cta">Get started</a>
+        </div>
+        <p class="copyright">© 2025 · All rights reserved</p>
+    </footer>
+</body>
+
+</html>
