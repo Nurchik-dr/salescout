@@ -6,7 +6,7 @@ import Results from "./components/Results/Results";
 import Tariffs from "./components/Tariffs/Tariffs";
 import TrySection from "./components/TrySection/TrySection";
 import Footer from "./components/Footer/Footer";
-import "./App.css"
+import "./App.css";
 
 const App: React.FC = () => {
   return (

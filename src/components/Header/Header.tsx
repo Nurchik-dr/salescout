@@ -12,8 +12,10 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <div className="container" style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-        <div className="logo">TopPrice</div>
+      <div className="container header-inner">
+        <div className="logo">
+          TopPrice<span className="logo-dot" />
+        </div>
         <nav>
           {menu.map((item) => (
             <a
