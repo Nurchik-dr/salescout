@@ -474,3 +474,20 @@ footer {
     font-size: 0.75rem;
   }
 }
+
+.spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: lighten;
+  background: radial-gradient(650px circle at var(--x, 50%) var(--y, 50%),
+      rgba(255, 255, 255, 0.12),
+      transparent 60%);
+  transition: background 0.08s ease-out;
+}
+
+.app-content {
+  position: relative;
+  z-index: 1;
+}
