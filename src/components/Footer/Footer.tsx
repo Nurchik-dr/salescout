@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-main">
-          <div className="footer-logo">Salescout</div>
+          <div className="footer-logo">TopPrice</div>
           <p>
             Бот, который помогает продавцам на Kaspi держать цены в топе и
             получать больше заказов.
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Salescout</span>
+        <span>© {new Date().getFullYear()} TopPrice</span>
         <span>Не является продуктом Kaspi. Работаем как отдельный сервис.</span>
       </div>
     </footer>

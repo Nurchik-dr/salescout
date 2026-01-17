@@ -46,3 +46,90 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================== */
+/* ADAPTIVE                    */
+/* =========================== */
+
+@media (max-width: 480px) {
+  .results-head h2 {
+    font-size: 22px;
+  }
+
+  .results-head p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .results-card {
+    padding: 16px 14px;
+  }
+
+  .results-value {
+    font-size: 22px;
+  }
+
+  .results-label {
+    font-size: 13px;
+  }
+
+  .results-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .results-head h2 {
+    font-size: 20px;
+  }
+
+  .results-head p {
+    font-size: 13px;
+  }
+
+  .results-card {
+    padding: 14px 12px;
+  }
+
+  .results-value {
+    font-size: 20px;
+  }
+
+  .results-label {
+    font-size: 12px;
+  }
+
+  .results-desc {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-kicker {
+    display: none;
+  }
+
+  .results-head p {
+    display: none;
+  }
+
+  .results-head h2 {
+    font-size: 18px;
+  }
+
+  .results-card {
+    padding: 12px 10px;
+  }
+
+  .results-value {
+    font-size: 18px;
+  }
+
+  .results-label {
+    font-size: 11px;
+  }
+
+  .results-desc {
+    font-size: 10px;
+  }
+}

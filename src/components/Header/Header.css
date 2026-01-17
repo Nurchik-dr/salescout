@@ -96,3 +96,34 @@
     padding-inline: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 12px;
+    padding: 10px 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .header-cta {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    font-size: 16px;
+  }
+  
+  .logo-badge {
+    display: none;
+  }
+  
+  .header-cta {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}

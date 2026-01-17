@@ -1,0 +1,180 @@
+.reviews {
+  text-align: left;
+}
+
+.reviews-head {
+  max-width: 520px;
+}
+
+.reviews-head p {
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.reviews-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* === CARD === */
+.review-card {
+  background: var(--bg-panel);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* === TOP: USER + BADGE === */
+.review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-avatar {
+  width: 32px;
+  height: 32px;
+  background: #e5e7eb;
+  border-radius: 50%;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.review-badge {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-red-dark);
+  font-weight: 600;
+}
+
+/* === RATING STARS === */
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.review-rating span {
+  font-size: 14px;
+  color: #facc15;
+}
+
+/* === TEXT === */
+.review-text {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+/* === FOOTER === */
+.review-footer {
+  font-size: 12px;
+  color: var(--text-soft);
+  opacity: 0.8;
+}
+
+/* === ADAPTIVE === */
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    padding: 16px 14px;
+  }
+
+  .review-name {
+    font-size: 13px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .review-card {
+    padding: 14px 12px;
+  }
+
+  .review-user {
+    gap: 8px;
+  }
+
+  .review-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .review-name {
+    font-size: 12.5px;
+  }
+
+  .review-text {
+    font-size: 12.5px;
+  }
+
+  .review-footer {
+    font-size: 11px;
+  }
+}
+
+/* === ultra-minimal 320px === */
+@media (max-width: 320px) {
+  .section-kicker {
+    display: none;
+  }
+
+  .reviews-head p {
+    display: none;
+  }
+
+  .reviews-head h2 {
+    font-size: 18px;
+  }
+
+  .review-card {
+    padding: 12px 10px;
+    gap: 10px;
+  }
+
+  .review-avatar {
+    width: 26px;
+    height: 26px;
+  }
+
+  .review-name {
+    font-size: 12px;
+  }
+
+  .review-text {
+    font-size: 11px;
+  }
+
+  .review-footer {
+    font-size: 10px;
+  }
+}

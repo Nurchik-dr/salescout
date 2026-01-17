@@ -60,3 +60,91 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================== */
+/* ADAPTIVE                    */
+/* =========================== */
+
+@media (max-width: 480px) {
+  .how-head h2 {
+    font-size: 22px;
+  }
+
+  .how-head p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .how-card {
+    padding: 16px 14px;
+  }
+
+  .how-card h3 {
+    font-size: 15px;
+  }
+
+  .how-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-kicker {
+    font-size: 10px;
+  }
+
+  .how-head h2 {
+    font-size: 20px;
+  }
+
+  .how-head p {
+    font-size: 13px;
+  }
+
+  .how-tag {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+
+  .how-card {
+    padding: 14px 12px;
+  }
+
+  .how-card h3 {
+    font-size: 14px;
+  }
+
+  .how-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .how {
+    text-align: left;
+  }
+
+  .how-head h2 {
+    font-size: 18px;
+  }
+
+  .how-head p {
+    display: none;
+  }
+
+  .section-kicker {
+    display: none;
+  }
+
+  .how-card {
+    padding: 12px 10px;
+  }
+
+  .how-card h3 {
+    font-size: 13px;
+  }
+
+  .how-card p {
+    font-size: 11px;
+  }
+}

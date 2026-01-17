@@ -7,6 +7,7 @@ import Tariffs from "./components/Tariffs/Tariffs";
 import TrySection from "./components/TrySection/TrySection";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+import Reviews from "./components/Reviews/Reviews";
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <How />
         <Results />
         <Tariffs />
+        <Reviews />
         <TrySection />
       </main>
       <Footer />

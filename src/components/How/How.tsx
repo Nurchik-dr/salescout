@@ -24,7 +24,7 @@ const How: React.FC = () => {
     <section id="how" className="how">
       <div className="how-head">
         <span className="section-kicker">Как работает бот</span>
-        <h2>Что делает Salescout за продавца на Kaspi</h2>
+        <h2>Что делает TopPrice за продавца на Kaspi</h2>
         <p>
           Вместо того чтобы вручную менять цену десятки раз в день, бот делает
           это сам — по вашим правилам.

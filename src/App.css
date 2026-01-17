@@ -4,7 +4,7 @@
   --bg-panel: #ffffff;
   --border-subtle: #e5e7eb;
 
-  --accent-red: #e53935;       /* наш "каспи-подобный" акцент */
+  --accent-red: #e53935;
   --accent-red-dark: #d32f2f;
   --accent-soft: rgba(229, 57, 53, 0.06);
 
@@ -36,7 +36,7 @@ body,
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
     sans-serif;
-  background: radial-gradient(circle at top, #f3f4f6 0, #f5f5f7 40%, #f9fafb);
+  background: #E7ECF0;
   color: var(--text-main);
   line-height: 1.5;
 }
@@ -57,8 +57,30 @@ main > section {
   padding: 80px 24px;
 }
 
+/* =========================== */
+/* ADAPTIVE                    */
+/* =========================== */
+
 @media (max-width: 768px) {
   main > section {
     padding: 64px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  main > section {
+    padding: 48px 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  main > section {
+    padding: 36px 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  main > section {
+    padding: 28px 10px;
   }
 }
