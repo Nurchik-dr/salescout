@@ -1,0 +1,62 @@
+.how {
+  text-align: left;
+}
+
+.section-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.how-head h2 {
+  font-size: 28px;
+  margin: 8px 0 10px;
+}
+
+.how-head p {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.how-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.how-card {
+  background: var(--bg-panel);
+  border-radius: var(--radius-md);
+  padding: 18px 16px 18px;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.how-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-red-dark);
+  margin-bottom: 10px;
+}
+
+.how-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.how-card p {
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+}

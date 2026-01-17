@@ -1,33 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import "./Header.css";
 
 const Header: React.FC = () => {
-  const [active, setActive] = useState("");
-
-  const menu = [
-    { id: "how", label: "Как работает" },
-    { id: "results", label: "Результаты" },
-    { id: "tariffs", label: "Тарифы" },
-    { id: "try", label: "Попробовать" },
-  ];
-
   return (
-    <header>
-      <div className="container header-inner">
-        <div className="logo">
-          TopPrice<span className="logo-dot" />
+    <header className="header">
+      <div className="header-inner">
+        <div className="logo-wrap">
+          <div className="logo">Salescout</div>
+          <span className="logo-badge">бот для продавцов на Kaspi</span>
         </div>
-        <nav className="header-nav">
-          {menu.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              onClick={() => setActive(item.id)}
-              className={active === item.id ? "active" : ""}
-            >
-              {item.label}
-            </a>
-          ))}
+
+        <nav className="nav">
+          <a href="#how">Как работает</a>
+          <a href="#results">Результаты</a>
+          <a href="#tariffs">Тарифы</a>
+          <a href="#try">Подключение</a>
         </nav>
+
+        <a href="#try" className="header-cta">
+          Подключить бота
+        </a>
       </div>
     </header>
   );

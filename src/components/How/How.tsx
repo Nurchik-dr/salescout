@@ -1,50 +1,44 @@
 import React from "react";
-import { Search, ArrowDown, Trophy, ShoppingCart } from "lucide-react";
+import "./How.css";
+
+const steps = [
+  {
+    title: "Подключаете магазин на Kaspi",
+    desc: "Создаём отдельный бот-профиль под ваш магазин. Не трогаем платежи и деньги — работаем только с ценой.",
+    tag: "1 шаг",
+  },
+  {
+    title: "Выбираете минимальную маржу",
+    desc: "Вы задаёте минимальную цену, ниже которой опускаться нельзя. Бот сам решает, насколько демпить, чтобы быть выше конкурентов.",
+    tag: "2 шаг",
+  },
+  {
+    title: "Бот следит за конкурентами 24/7",
+    desc: "Каждые 3 минуты бот проверяет цены конкурентов на Kaspi и двигает вашу цену в нужный диапазон, чтобы вы оставались первыми.",
+    tag: "3 шаг",
+  },
+];
 
 const How: React.FC = () => {
-  const steps = [
-    {
-      icon: <Search size={20} />,
-      title: "Смотрим цены",
-      text: "TopPrice проверяет цены продавцов в карточке товара.",
-    },
-    {
-      icon: <ArrowDown size={20} />,
-      title: "Снижаем цену",
-      text: "Если ты не первый — снижаем на выбранный шаг ниже конкурента.",
-    },
-    {
-      icon: <Trophy size={20} />,
-      title: "Ты снова первый",
-      text: "Твой товар поднимается в самый верх списка.",
-    },
-    {
-      icon: <ShoppingCart size={20} />,
-      title: "Ты забираешь заказы",
-      text: "Первый продавец получает большую часть покупок.",
-    },
-  ];
-
   return (
-    <section id="how">
-      <div className="container">
-        <h2>Как работает TopPrice</h2>
-        <p className="section-sub">
-          Без магии и лишних слов. Мы делаем то, что обычно делает менеджер —
-          только быстрее и точнее.
+    <section id="how" className="how">
+      <div className="how-head">
+        <span className="section-kicker">Как работает бот</span>
+        <h2>Что делает Salescout за продавца на Kaspi</h2>
+        <p>
+          Вместо того чтобы вручную менять цену десятки раз в день, бот делает
+          это сам — по вашим правилам.
         </p>
+      </div>
 
-        <div className="grid grid-2">
-          {steps.map((s, idx) => (
-            <div key={idx} className="card">
-              <div className="card-header">
-                <div className="icon-wrapper">{s.icon}</div>
-                <h3>{s.title}</h3>
-              </div>
-              <p>{s.text}</p>
-            </div>
-          ))}
-        </div>
+      <div className="how-grid">
+        {steps.map((step) => (
+          <div key={step.title} className="how-card">
+            <div className="how-tag">{step.tag}</div>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

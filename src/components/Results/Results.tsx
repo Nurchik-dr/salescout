@@ -1,39 +1,44 @@
 import React from "react";
-import { BarChart3 } from "lucide-react";
+import "./Results.css";
+
+const stats = [
+  {
+    label: "Рост заказов",
+    value: "+32%",
+    desc: "В среднем по магазинам, которые держат товар в топ-3 выдачи.",
+  },
+  {
+    label: "Экономия времени",
+    value: "3–4 ч/день",
+    desc: "Больше не нужно вручную перепроверять конкурентов и менять цены.",
+  },
+  {
+    label: "Безопасность",
+    value: "0 доступов к деньгам",
+    desc: "Бот работает только с ценой — не может списать или получить оплату.",
+  },
+];
 
 const Results: React.FC = () => {
   return (
-    <section id="results">
-      <div className="container">
-        <h2>Результаты магазинов</h2>
-        <p className="section-sub">
-          Когда товар стоит первым — его покупают чаще. Это видят и новички, и
-          опытные продавцы.
+    <section id="results" className="results">
+      <div className="results-head">
+        <span className="section-kicker">Результаты</span>
+        <h2>Что даёт демпинг-бот на Kaspi в реальности</h2>
+        <p>
+          Основная задача — не “магические цифры”, а стабильный поток заказов за
+          счёт того, что вы выше конкурентов.
         </p>
+      </div>
 
-        <div className="grid">
-          <div className="card">
-            <div className="card-header">
-              <div className="icon-wrapper">
-                <BarChart3 size={18} />
-              </div>
-              <h3>Новички</h3>
-            </div>
-            <p className="card-metric">+400% заказов</p>
-            <p>За первые 10 дней использования.</p>
+      <div className="results-grid">
+        {stats.map((item) => (
+          <div key={item.label} className="results-card">
+            <div className="results-value">{item.value}</div>
+            <div className="results-label">{item.label}</div>
+            <p className="results-desc">{item.desc}</p>
           </div>
-
-          <div className="card">
-            <div className="card-header">
-              <div className="icon-wrapper">
-                <BarChart3 size={18} />
-              </div>
-              <h3>Опытные магазины</h3>
-            </div>
-            <p className="card-metric">+200% заказов</p>
-            <p>За первый месяц работы.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

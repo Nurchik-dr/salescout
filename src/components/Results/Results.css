@@ -1,0 +1,48 @@
+.results-head h2 {
+  font-size: 26px;
+  margin: 8px 0 10px;
+}
+
+.results-head p {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.results-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.results-card {
+  background: var(--bg-panel);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.results-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent-red);
+  margin-bottom: 4px;
+}
+
+.results-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.results-desc {
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+@media (max-width: 900px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}

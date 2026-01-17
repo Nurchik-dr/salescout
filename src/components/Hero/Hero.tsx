@@ -1,64 +1,82 @@
 import React from "react";
-import { ArrowRight, TrendingUp, Store } from "lucide-react";
+import "./Hero.css";
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero">
-      <div className="container hero-inner">
-        <div>
-          <div className="hero-row" style={{ marginBottom: 16 }}>
-            <div className="hero-chip">Для продавцов Kaspi</div>
-            <span className="hero-secondary">Работает 24/7</span>
-          </div>
+    <section id="hero" className="hero">
+      <div className="hero-left">
+        <div className="hero-chip">Для продавцов на Kaspi</div>
 
-          <h1>Будь первым в карточке товара</h1>
-          <p className="hero-subtitle">
-            TopPrice следит за ценами конкурентов и снижает твою на выбранный шаг,
-            чтобы покупатели выбирали тебя, а не других.
-          </p>
+        <h1 className="hero-title">
+          Бот, который держит твой товар{" "}
+          <span className="hero-highlight">первым в выдаче Kaspi</span>
+        </h1>
 
-          <div className="hero-row" style={{ marginTop: 10, gap: 16 }}>
-            <a href="#try" className="btn">
-              Попробовать бесплатно <ArrowRight size={16} />
-            </a>
-            <span className="hero-secondary">3 дня бесплатно</span>
-          </div>
+        <p className="hero-subtitle">
+          Salescout следит за конкурентами на Kaspi и сам меняет цену так, чтобы
+          твой товар был выше в списке. Ты задаёшь минимальную маржу — бот
+          делает остальное.
+        </p>
+
+        <ul className="hero-list">
+          <li>Мониторим цены конкурентов на Kaspi каждые 3 минуты</li>
+          <li>Опускаем цену на выбранный шаг, чтобы вернуться на 1 место</li>
+          <li>Работает 24/7, не трогая твой баланс и платежи</li>
+        </ul>
+
+        <div className="hero-actions">
+          <a href="#try" className="hero-btn-primary">
+            Подключить к моему магазину на Kaspi
+          </a>
+          <span className="hero-note">
+            Без доступа к деньгам • можно отключить в любой момент
+          </span>
         </div>
+      </div>
 
-        <div className="hero-side">
-          <div className="hero-card">
-            <div className="hero-card-header">
-              <div style={{ display: "flex", gap: 8 }}>
-                <div className="hero-avatar">
-                  <Store size={14} />
-                </div>
-                <div>
-                  <div className="hero-title">Магазин «Gadget Plus»</div>
-                  <div className="hero-city">Kaspi · Алматы</div>
-                </div>
-              </div>
-              <span className="hero-badge">Бот включён</span>
-            </div>
-
-            <div className="hero-row-stats">
-              <div>
-                <div className="hero-stat-label">Сейчас место</div>
-                <div className="hero-rank">1 из 12</div>
-              </div>
-              <div>
-                <div className="hero-stat-label">Цена</div>
-                <div className="hero-price">18 979 ₸</div>
-              </div>
-              <div>
-                <div className="hero-chip2">
-                  <TrendingUp size={12} /> +243%
-                </div>
-              </div>
-            </div>
+      <div className="hero-right">
+        <div className="hero-mock">
+          <div className="hero-mock-header">
+            <span className="dot red" />
+            <span className="dot yellow" />
+            <span className="dot green" />
           </div>
 
-          <div className="hero-float">
-            <div className="hero-dot" /> обновлено 3 минуты назад
+          <div className="hero-mock-body">
+            <div className="mock-row-top">
+              <div className="mock-tag">Категория: Смартфоны</div>
+              <div className="mock-status">Kaspi магазин</div>
+            </div>
+
+            <div className="mock-table">
+              <div className="mock-table-head">
+                <span>Товар</span>
+                <span>Цена</span>
+                <span>Позиция</span>
+              </div>
+
+              <div className="mock-table-row active">
+                <span>iPhone 13 128GB</span>
+                <span>289 990 ₸</span>
+                <span className="pos pos-1">1 место</span>
+              </div>
+
+              <div className="mock-table-row">
+                <span>iPhone 13 128GB</span>
+                <span>290 000 ₸</span>
+                <span className="pos">2 место</span>
+              </div>
+
+              <div className="mock-table-row">
+                <span>iPhone 13 128GB</span>
+                <span>292 000 ₸</span>
+                <span className="pos">3 место</span>
+              </div>
+            </div>
+
+            <div className="mock-footer">
+              Bot: снизили цену на выбранный шаг → вернули 1 место в выдаче Kaspi
+            </div>
           </div>
         </div>
       </div>
