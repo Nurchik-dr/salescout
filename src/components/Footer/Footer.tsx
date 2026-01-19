@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4>Связаться</h4>
-            <span>Напишите нам в WhatsApp/Telegram</span>
+            <span>Напишите нам в WhatsApp</span>
           </div>
         </div>
       </div>
